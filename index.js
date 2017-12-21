@@ -101,6 +101,10 @@ HttpTemperature.prototype = {
    getState: function (callback) {
       this.log('Call to getState: waiting_response is "' + this.waiting_response + '"' );
       callback(null,85);
+      return 85;
+         
+         
+         
       this.updateState(); //This sets the promise in last_value
       this.last_value.then((value) => {
          callback(null, value);
